@@ -39,7 +39,6 @@ function addItem(buttonElemnt){
     let itemName = outElemnt.querySelector('h2').textContent;
     
     let price = outElemnt.querySelector('.priceForOne').textContent.replace(/[^0-9.]/g, '');//נוריד את כל מה שהוא לא ספרה או נקודה
-    console.log(price);   
     
     let srcImg = outElemnt.querySelector('img').src;
 
@@ -79,16 +78,11 @@ function addItem(buttonElemnt){
 
 //יצירת אובייקט 'פריט' חדש והכנסתו למערך הפריטים
 function createItemObg(itemName, price){
-    console.log(ItemsArr.length +'index');
     ItemsArr.push(new Item(itemName, price, 1, ItemsArr.length)); //הוספה למערך המוצרים את הפריט החדש שנוסף
-    console.log(price);
-        
+    
     //שינוי המחיר הסופי המוצג
     totalPrice += price;
-
-    console.log(totalPrice);    
     document.getElementById('priceCart').innerText = `סה"כ לתשלום: ${totalPrice.toFixed(2)} \u20AA `; //הצגת המחיר הסופי המעודכן
-    
     document.getElementById('emptyCartP').style.display = "none";
 
 }
@@ -143,7 +137,6 @@ function changePrice(itemInfo, obgItem, prevamount){
     totalPrice -= prevamount * obgItem.priceMekori;
     totalPrice += obgItem.amount * obgItem.priceMekori;
    
-    // totalPrice.tofixed(2) - בלי זה זה עושה מחיר מאוד ארוך, למה ??
     document.getElementById('priceCart').innerHTML = `<span>סה"כ לתשלום: ${totalPrice.toFixed(2)} \u20AA </span>`;//נעדכן את המחיר החדש במסך
 }
 
@@ -172,10 +165,7 @@ function deleteItemFromCart(removeElemntBtn){
 
     totalPrice -= objectToRemove.priceMekori * objectToRemove.amount; //הורדה של המחיר המקורי כפול הכמות
 
-    //totalPrice.tofixed(2)
-    document.getElementById('priceCart').innerText = `סה"כ לתשלום: ${totalPrice.toFixed(2)} \u20AA`; //הצגה של המחיר החדש על המסך
-    console.log(totalPrice);
-    
+    document.getElementById('priceCart').innerText = `סה"כ לתשלום: ${totalPrice.toFixed(2)} \u20AA`; //הצגה של המחיר החדש על המסך    
     ItemsArr.splice(objectToRemove.index, 1); //נמחק מהמערך את האובייקט הרלוונטי
     changeIndex();
 
@@ -232,7 +222,6 @@ function addItemNotFromOptions(){
 
 //הוספת פריט מחוץ לרשימה על ידי אנטר
 document.getElementById('inputItem').addEventListener('keypress', event => {
-    console.log(event);
     if(event.key == 'Enter')
         addItemNotFromOptions(document.getElementById('addItemExternal'));
 })

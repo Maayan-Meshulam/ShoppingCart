@@ -66,12 +66,10 @@
         }
         .card .addDiv{
             display: flex;
-            /* border: 1px solid purple; */
             align-items: center;
             gap: 10px;
         }
         .contentCard{
-            /* border: 1px solid red; */
             display: flex;
             flex-direction: column;
             width: fit-content;
