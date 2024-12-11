@@ -5,144 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>shopping cart</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
-
-        body{
-            direction: rtl;
-        }
-
-        h1{
-            display: inline-block;
-            margin: 0;
-            color: #78030f;
-        }
-
-        ol{
-            padding-right: 20px;
-        }
-
-        li{
-            margin-bottom: 30px;
-            padding-right: 20px;
-        }
-
-        #cartSide{
-             width: 20%;
-             padding: 20px;
-             border: 2px solid grey;
-             /* display: inline-block; */
-             flex-direction: column;
-             /* position: sticky;
-             top: 0;
-             left: 0; */
-             font-family: 'Hebbo', sans-serif;
-             height: 500px;
-        }
-        
-        .card img{
-            width: 150px;
-            height: 150px;
-        }
-
-        li img{
-            width: 50px;
-            height: 50px;
-        }
-        .card button{
-            margin-top: 10px;
-            border-radius: 40px;
-            padding: 5px;
-            border: none;
-            background-color:crimson;
-            color: white;
-            cursor: pointer;
-        }
-        .card button:hover{
-            background-color:#fc2852;
-        }
-        .card .addDiv{
-            display: flex;
-            /* border: 1px solid purple; */
-            align-items: center;
-            gap: 10px;
-        }
-        .contentCard{
-            /* border: 1px solid red; */
-            display: flex;
-            flex-direction: column;
-            width: fit-content;
-            align-items: center;
-            margin-right: 50%;
-            transform: translateX(50%);
-        } 
-        .AmountDiv{
-            display: inline-block;
-        }   
-        .itemInfo h2{
-            font-size: 16px;
-        }
-        .AmountDiv > input{
-            width: 30px;
-            text-align: center;
-            border: none;
-        }
-        .minus, .plus{
-            background-color:lightgrey;
-            padding: 0 10px;
-            cursor: pointer;
-        }
-        .minus:hover, .plus:hover{
-            background-color:#a7a6a6;
-        }
-        .priceInCart{
-            color: green;
-            font-weight: bold;
-        }
-        table{
-            width: 70%;
-            border-spacing: 10px;
-            /* border: 1px solid red; */
-            /* display: inline-table; */
-        }
-        
-        #addDiv{
-            margin-top: 100px;
-        }        
-        #addDiv > input{
-            border: 1px solid #f518af;
-            width: 150px;
-            height: 30px;
-            box-sizing: border-box;
-        }
-
-        #addDiv > input:focus{
-            outline: 1px solid #9e086f;
-        }
-
-        #addDiv > button{
-            background-color: #ed09a6;
-            color: white;
-            border: none;
-            height: 30px;
-            width: 70px;
-            box-sizing: border-box;
-            cursor: pointer;
-        }
-
-        #addDiv > label{
-            display: block;
-            text-decoration: underline;
-            margin-bottom: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-    <div style="display: flex;flex-wrap: nowrap;justify-content: space-evenly;">
-        <table>
-            <tr>
-                <td class="card">
+<div id="containerAbove">
+    <div id="continerItems">
+                <div class="card">
                     <div class="contentCard">
                         <h2>מלפפון</h2>
                         <img src="images/cucamber.jpeg" alt="מלפפון">
@@ -151,8 +19,8 @@
                             <button onclick="addItem(this)">הוספה</button>
                         </div>
                     </div>
-                </td>
-                <td class="card">
+                </div>
+                <div class="card">
                     <div class="contentCard">
                         <h2>עגבניה</h2>
                         <img src="images/tomato.jpg" alt="עגבניה">
@@ -161,8 +29,8 @@
                             <button onclick="addItem(this)">הוספה</button>
                         </div>
                     </div>
-                </td>
-                <td class="card">
+                </div>
+                <div class="card">
                     <div class="contentCard">
                         <h2>בצל</h2>
                         <img src="images/onion.jpg" alt="בצל">
@@ -171,8 +39,8 @@
                             <button onclick="addItem(this)">הוספה</button>
                         </div>
                     </div>
-                </td>
-                <td class="card">
+                </div>
+                <div class="card">
                     <div class="contentCard">
                         <h2>צנונית</h2>
                         <img src="images/znon.jpg" alt="צנונית">
@@ -181,8 +49,8 @@
                             <button onclick="addItem(this)">הוספה</button>
                         </div>
                     </div>
-                </td>
-                <td class="card">
+                </div>
+                <div class="card">
                     <div class="contentCard">
                         <h2>גמבה</h2>
                         <img src="images/gamba.jpg" alt="גמבה">
@@ -191,11 +59,8 @@
                             <button onclick="addItem(this)">הוספה</button>
                         </div>
                     </div>
-                </td>
-            </tr>
-    
-            <tr>
-                    <td class="card">
+                </div>
+                    <div class="card">
                         <div class="contentCard">
                             <h2>חלב</h2>
                             <img src="images/milk.jpg" alt="חלב">
@@ -204,8 +69,8 @@
                                 <button onclick="addItem(this)">הוספה</button>
                             </div>
                         </div>
-                    </td>
-                    <td class="card">
+                    </div>
+                    <div class="card">
                         <div class="contentCard">
                             <h2>יוגרוט</h2>
                             <img src="images/yogort.jpg" alt="יוגרוט">
@@ -214,8 +79,8 @@
                                 <button onclick="addItem(this)">הוספה</button>
                             </div>
                         </div>
-                    </td>
-                    <td class="card">
+                    </div>
+                    <div class="card">
                         <div class="contentCard">
                             <h2>יולו</h2>
                             <img src="images/yolo.jpg" alt="מעדן יולו">
@@ -224,8 +89,8 @@
                                 <button onclick="addItem(this)">הוספה</button>
                             </div>
                         </div>
-                    </td>
-                    <td class="card">
+                    </div>
+                    <div class="card">
                         <div class="contentCard">
                             <h2>גבינה לבנה</h2>
                             <img src="images/whitecheeze.jpg" alt="גבינה לבנה">
@@ -234,8 +99,8 @@
                                 <button onclick="addItem(this)">הוספה</button>
                             </div>
                         </div>
-                    </td>
-                    <td class="card">
+                    </div>
+                    <div class="card">
                         <div class="contentCard">
                             <h2>גבינה צהובה</h2>
                             <img src="images/cheese.webp" alt="גבינה צהובה">
@@ -244,11 +109,8 @@
                                 <button onclick="addItem(this)">הוספה</button>
                             </div>
                         </div>
-                    </td>
-                </tr>
-    
-                <tr>
-                        <td class="card">
+                    </div>
+                        <div class="card">
                             <div class="contentCard">
                                 <h2>ענבים</h2>
                                 <img src="images/graps.jpg" alt="ענבים">
@@ -257,8 +119,8 @@
                                     <button onclick="addItem(this)">הוספה</button>
                                 </div>
                             </div>
-                        </td>
-                        <td class="card">
+                        </div>
+                        <div class="card">
                             <div class="contentCard">
                                 <h2>אבטיח</h2>
                                 <img src="images/watermelon.jpg" alt="אבטיח">
@@ -267,8 +129,8 @@
                                     <button onclick="addItem(this)">הוספה</button>
                                 </div>
                             </div>
-                        </td>
-                        <td class="card">
+                        </div>
+                        <div class="card">
                             <div class="contentCard">
                                 <h2>אפרסק</h2>
                                 <img src="images/peach.jpg" alt="אפרסק">
@@ -277,8 +139,8 @@
                                     <button onclick="addItem(this)">הוספה</button>
                                 </div>
                             </div>
-                        </td>
-                        <td class="card">
+                        </div>
+                        <div class="card">
                             <div class="contentCard">
                                 <h2> אננס</h2>
                                 <img src="images/pineapple.jpg" alt="אננס ">
@@ -287,8 +149,8 @@
                                     <button onclick="addItem(this)">הוספה</button>
                                 </div>
                             </div>
-                        </td>
-                        <td class="card">
+                        </div>
+                        <div class="card">
                             <div class="contentCard">
                                 <h2> קלמנטינה</h2>
                                 <img src="images/klemantina.jpg" alt=" קלמנטיה">
@@ -297,11 +159,8 @@
                                     <button onclick="addItem(this)">הוספה</button>
                                 </div>
                             </div>
-                        </td>
-                    </tr>
-    
-                    <tr>
-                        <td class="card">
+                        </div>
+                        <div class="card">
                             <div class="contentCard">
                                 <h2>שוקולד חלב</h2>
                                 <img src="images/milkchoclate.jpg" alt="שוקולד חלב">
@@ -310,8 +169,8 @@
                                     <button onclick="addItem(this)">הוספה</button>
                                 </div>
                             </div>
-                        </td>
-                        <td class="card">
+                        </div>
+                        <div class="card">
                             <div class="contentCard">
                                 <h2>שוקולד תות</h2>
                                 <img src="images/choclateStraberry.jpg" alt="שוקולד תות">
@@ -320,8 +179,8 @@
                                     <button onclick="addItem(this)">הוספה</button>
                                 </div>
                             </div>
-                        </td>
-                        <td class="card">
+                        </div>
+                        <div class="card">
                             <div class="contentCard">
                                 <h2>קליק</h2>
                                 <img src="images/klik.webp" alt="קליק">
@@ -330,8 +189,8 @@
                                     <button onclick="addItem(this)">הוספה</button>
                                 </div>
                             </div>
-                        </td>
-                        <td class="card">
+                        </div>
+                        <div class="card">
                             <div class="contentCard">
                                 <h2>סוכרייה</h2>
                                 <img src="images/sucaria.jpg" alt="סוכרייה">
@@ -340,8 +199,8 @@
                                     <button onclick="addItem(this)">הוספה</button>
                                 </div>
                             </div>
-                        </td>
-                        <td class="card">
+                        </div>
+                        <div class="card">
                             <div class="contentCard">
                                 <h2>חמצוצים</h2>
                                 <img src="images/hamzuzim.webp" alt="חמצוצים">
@@ -350,11 +209,8 @@
                                     <button onclick="addItem(this)">הוספה</button>
                                 </div>
                             </div>
-                        </td>
-                    </tr>
-    
-                    <tr>
-                        <td class="card">
+                        </div>
+                        <div class="card">
                             <div class="contentCard">
                                 <h2>מיץ תפוזים</h2>
                                 <img src="images/drinkOrange.png" alt="מיץ תפוזים">
@@ -363,8 +219,8 @@
                                     <button onclick="addItem(this)">הוספה</button>
                                 </div>
                             </div>
-                        </td>
-                        <td class="card">
+                        </div>
+                        <div class="card">
                             <div class="contentCard">
                                 <h2>מיץ ענבים</h2>
                                 <img src="images/drinkgraps.webp" alt="מיץ ענבים">
@@ -373,8 +229,8 @@
                                     <button onclick="addItem(this)">הוספה</button>
                                 </div>
                             </div>
-                        </td>
-                        <td class="card">
+                        </div>
+                        <div class="card">
                             <div class="contentCard">
                                 <h2>קולה</h2>
                                 <img src="images/drinkkola.jpg" alt="קולה">
@@ -383,18 +239,8 @@
                                     <button onclick="addItem(this)">הוספה</button>
                                 </div>
                             </div>
-                        </td>
-                        <td class="card">
-                            <div class="contentCard">
-                                <h2>שוקו</h2>
-                                <img src="images/drinkshoko.jpg" alt="שוקו">
-                                <div class="addDiv">
-                                    <span class="priceForOne">12.00 &#8362; <span style="font-size: 10px;">ליחידה</span> </span>
-                                    <button onclick="addItem(this)">הוספה</button>
-                                </div>
-                            </div>
-                        </td>
-                        <td class="card">
+                        </div>
+                        <div class="card">
                             <div class="contentCard">
                                 <h2>אייס קפה</h2>
                                 <img src="images/drinkcoffe.jpg" alt="אייס קפה">
@@ -403,10 +249,19 @@
                                     <button onclick="addItem(this)">הוספה</button>
                                 </div>
                             </div>
-                        </td>
-                    </tr>
-                
-        </table>
+                        </div>
+                        <div class="card">
+                            <div class="contentCard">
+                                <h2>שוקו</h2>
+                                <img src="images/drinkshoko.jpg" alt="שוקו">
+                                <div class="addDiv">
+                                    <span class="priceForOne">12.00 &#8362; <span style="font-size: 10px;">ליחידה</span> </span>
+                                    <button onclick="addItem(this)">הוספה</button>
+                                </div>
+                            </div>
+                        </div>
+                                        
+                </div>
     
         <div id="cartSide">
             <div>

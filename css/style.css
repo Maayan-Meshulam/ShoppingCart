@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+
+        body{
+            direction: rtl;
+        }
+
+        h1{
+            display: inline-block;
+            margin: 0;
+            color: #78030f;
+        }
+
+        ol{
+            padding-right: 20px;
+        }
+
+        li{
+            margin-bottom: 30px;
+            padding-right: 20px;
+        }
+
+        #containerAbove{
+            display: flex;
+            justify-content: space-around;
+        }
+
+        #continerItems{
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            gap: 10px;
+            width: 70%;
+        }
+
+        #cartSide{
+             width: 20%;
+             padding: 20px;
+             border: 2px solid grey;
+             flex-direction: column;
+             font-family: 'Hebbo', sans-serif;
+             height: 500px;
+             overflow-x: auto;
+            -webkit-overflow-scrolling:touch;
+        }
+        
+        .card img{
+            width: 150px;
+            height: 150px;
+        }
+
+        li img{
+            width: 50px;
+            height: 50px;
+        }
+        .card button{
+            margin-top: 10px;
+            border-radius: 40px;
+            padding: 5px;
+            border: none;
+            background-color:crimson;
+            color: white;
+            cursor: pointer;
+        }
+        .card button:hover{
+            background-color:#fc2852;
+        }
+        .card .addDiv{
+            display: flex;
+            /* border: 1px solid purple; */
+            align-items: center;
+            gap: 10px;
+        }
+        .contentCard{
+            /* border: 1px solid red; */
+            display: flex;
+            flex-direction: column;
+            width: fit-content;
+            align-items: center;
+            margin-right: 50%;
+            transform: translateX(50%);
+        } 
+        .AmountDiv{
+            display: inline-block;
+        }   
+        .itemInfo h2{
+            font-size: 16px;
+        }
+        .AmountDiv > input{
+            width: 30px;
+            text-align: center;
+            border: none;
+        }
+        .minus, .plus{
+            background-color:lightgrey;
+            padding: 0 10px;
+            cursor: pointer;
+        }
+        .minus:hover, .plus:hover{
+            background-color:#a7a6a6;
+        }
+        .priceInCart{
+            color: green;
+            font-weight: bold;
+        }
+
+        #addDiv{
+            margin-top: 100px;
+        }        
+        #addDiv > input{
+            border: 1px solid #f518af;
+            width: 150px;
+            height: 30px;
+            box-sizing: border-box;
+        }
+
+        #addDiv > input:focus{
+            outline: 1px solid #9e086f;
+        }
+
+        #addDiv > button{
+            background-color: #ed09a6;
+            color: white;
+            border: none;
+            height: 30px;
+            width: 70px;
+            box-sizing: border-box;
+            cursor: pointer;
+        }
+
+        #addDiv > label{
+            display: block;
+            text-decoration: underline;
+            margin-bottom: 10px;
+        }
+
+
+
+        /**************************************** media screen ******************************************* */
+
+        @media screen and (max-width: 1200px) {
+          
+            #containerAbove{
+                flex-direction: column-reverse;
+                gap: 50px;
+                align-items: center;
+            }
+
+            #cartSide{
+               min-width: 400px;
+            }
+
+            #continerItems{
+                width: 90%;
+            }
+
+            .card img{
+                width: 120px;
+                height: 120px;
+            }
+
+            .card h2{
+                font-size: 20px;
+            }
+           
+            .priceForOne{
+                font-size: 14px;
+            }
+        
+        }
+
+        @media screen and (max-width: 947px) {
+            #continerItems{
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(9, 1fr);
+            }
+        }
+        
+
+        @media screen and (max-width: 600px) {
+
+            #continerItems{
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(13, 1fr);
+            }
+
+              #cartSide{
+                min-width: 280px;
+                box-sizing: border-box;
+            }
+
+            .card img{
+                width: 80px;
+                height: 80px;
+            }
+
+            .card h2{
+                font-size: 18px;
+            }
+           
+            .priceForOne{
+                font-size: 12px;
+            }
+
+            .itemInfo img{
+                width: 30px;
+                height: 30px;
+            }
+
+            .itemInfo span{
+                font-size: 12px;
+            }
+
+            .itemInfo input{
+                width: 20px;
+            }
+
+            #cartSide h1{
+                font-size: 25px;
+            }
+
+            #cartide span, #cartSide label{
+                font-size: 14px;
+            }
+
+            #addDiv input{
+                width: 120px;
+            }
+
+            #cartSide button{
+                width: 50px;
+            }
+            #priceCart, #emptyCartP{
+                font-size: 14px;
+            }
+
+            li{
+                padding-right: 10px;
+                font-size: 14px;
+            }
+        }
